@@ -76,4 +76,12 @@ export class HomePage extends BasePage {
     static get verifyNavigation() {
         return cy.get('nav#sidebar-wrapper');
     }
+
+    static get clickHistory() {
+        return cy.get('a[href="history.php#history"]');
+    }
+
+    static get validateAppointment() {
+        return cy.get('p');
+    }
 }

@@ -67,5 +67,11 @@ describe('Katalon scenarios', () => {
 
     //Validate that the sidebar is active
     HomePage.verifyNavigation.should('have.class', 'active');
+
+    //Click- History
+    HomePage.clickHistory.click();
+
+    //Validate that- No appointment- is visible
+    HomePage.validateAppointment.first().should('have.text', 'No appointment.');
   })
 })
