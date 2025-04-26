@@ -37,5 +37,12 @@ describe('Katalon scenarios', () => {
 
     //Click- Book Appointment
     HomePage.clickBookAppointment.click();
+
+    //Validate that previously set values are correct
+    HomePage.verifyFacility.should('have.text', 'Seoul CURA Healthcare Center');
+    HomePage.verifyReadmition.should('have.text', 'Yes');
+    HomePage.verifyProgramm.should('have.text', 'Medicaid');
+    HomePage.verifyVisitDay.should('contain.text', '30/');
+    HomePage.verifyComment.should('have.text', 'CURA Healthcare Service'); 
   })
 })

@@ -48,4 +48,24 @@ export class HomePage extends BasePage {
     static get clickBookAppointment() {
         return cy.get('#btn-book-appointment');
     }
+
+    static get verifyFacility() {
+        return cy.get('#facility');
+    }
+
+    static get verifyReadmition() {
+        return cy.get('#hospital_readmission');
+    }
+
+    static get verifyProgramm() {
+        return cy.get('#program');
+    }
+
+    static get verifyVisitDay() {
+        return cy.get('#visit_date');
+    }
+
+    static get verifyComment() {
+        return cy.get('#comment');
+    }
 }
