@@ -47,7 +47,7 @@ describe('Katalon scenarios', () => {
   })
 
   //Scenario 2- Appointment history empty
-  it.only('Appointment history empty', () => {
+  it('Appointment history empty', () => {
 
     //Open https://katalon-demo-cura.herokuapp.com/
     HomePage.visit();
