@@ -17,5 +17,25 @@ describe('Katalon scenarios', () => {
 
     //Click- Login
     HomePage.clickLogin.click();
+
+    //Set the following values:
+    //Facility- Seoul CURA Healthcare Center
+    HomePage.choosefacility.select('Seoul CURA Healthcare Center');
+
+    //Check- Apply for hospital readmission
+    HomePage.applyReadmission.click();
+
+    //Select- Medicaid
+    HomePage.clickHealthcareProgramm.eq(1).click();
+
+    //Set Date value by using the widget- 30
+    HomePage.clickCalendar.click();
+    HomePage.selectDay.contains('30').click();
+
+    //Set comment- CURA Healthcare Service
+    HomePage.setCommand.type('CURA Healthcare Service');
+
+    //Click- Book Appointment
+    HomePage.clickBookAppointment.click();
   })
 })
