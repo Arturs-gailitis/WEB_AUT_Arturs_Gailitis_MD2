@@ -45,4 +45,27 @@ describe('Katalon scenarios', () => {
     HomePage.verifyVisitDay.should('contain.text', '30/');
     HomePage.verifyComment.should('have.text', 'CURA Healthcare Service'); 
   })
+
+  //Scenario 2- Appointment history empty
+  it.only('Appointment history empty', () => {
+
+    //Open https://katalon-demo-cura.herokuapp.com/
+    HomePage.visit();
+
+    //Click- Make Appointment
+    HomePage.clickMakeAppointment.click();
+
+    //Set username and password fields with the demo account credentials
+    HomePage.typeUsername.type('John Doe');
+    HomePage.typePassword.type('ThisIsNotAPassword');
+
+    //Click- Login
+    HomePage.clickLogin.click();
+    
+    //Click- Menu/Stack/Burger icon
+    HomePage.navigation.click();
+
+    //Validate that the sidebar is active
+    HomePage.verifyNavigation.should('have.class', 'active');
+  })
 })

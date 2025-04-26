@@ -68,4 +68,12 @@ export class HomePage extends BasePage {
     static get verifyComment() {
         return cy.get('#comment');
     }
+
+    static get navigation() {
+        return cy.get('a#menu-toggle');
+    }
+
+    static get verifyNavigation() {
+        return cy.get('nav#sidebar-wrapper');
+    }
 }
