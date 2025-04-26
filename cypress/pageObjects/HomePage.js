@@ -16,4 +16,8 @@ export class HomePage extends BasePage {
     static get typePassword() {
         return cy.get('input#txt-password');
     }
+
+    static get clickLogin() {
+        return cy.get('button#btn-login');
+    }
 }

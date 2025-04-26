@@ -14,5 +14,8 @@ describe('Katalon scenarios', () => {
     //Set username and password fields with the demo account credentials
     HomePage.typeUsername.type('John Doe');
     HomePage.typePassword.type('ThisIsNotAPassword');
+
+    //Click- Login
+    HomePage.clickLogin.click();
   })
 })
